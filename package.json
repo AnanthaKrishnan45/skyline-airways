@@ -1,0 +1,14 @@
+{
+  "name": "skyline-airways",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flight ticket booking system with Express API and airport-themed web UI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
