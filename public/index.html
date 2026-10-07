@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skyline Airways | Book Your Flight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <nav class="topbar">
+        <a class="brand" href="#top" aria-label="Skyline Airways home"><span class="brand-mark">S</span>SKYLINE</a>
+        <div class="nav-links"><a href="#flights">Explore flights</a><a href="#manage">Manage booking</a><button class="outline-btn" id="signin">Sign in</button></div>
+      </nav>
+      <section class="hero" id="top">
+        <div class="flight-path path-one"></div><div class="flight-path path-two"></div>
+        <div class="hero-copy"><p class="eyebrow">THE WORLD IS READY</p><h1>Meet your next<br /><i>horizon.</i></h1><p class="hero-text">Thoughtful routes, generous space, and a calmer way to fly.</p></div>
+        <div class="terminal-board"><span>SKYLINE DEPARTURES</span><strong>DEL <b>→</b> BOM</strong><small>ON TIME · GATE 18</small></div>
+      </section>
+      <section class="search-wrap" aria-label="Flight search">
+        <form id="searchForm" class="search-panel">
+          <div class="trip-types"><label><input type="radio" name="tripType" value="round" checked /><span>Round trip</span></label><label><input type="radio" name="tripType" value="oneway" /><span>One way</span></label></div>
+          <div class="fields">
+            <label class="field"><span>FROM</span><select id="from" aria-label="Departure airport"></select></label>
+            <button type="button" class="swap" id="swap" aria-label="Swap airports">↔</button>
+            <label class="field"><span>TO</span><select id="to" aria-label="Arrival airport"></select></label>
+            <label class="field date-field"><span>DEPART</span><input id="date" type="date" required /></label>
+            <label class="field"><span>TRAVELLERS</span><select id="passengers"><option value="1">1 traveller</option><option value="2">2 travellers</option><option value="3">3 travellers</option><option value="4">4 travellers</option></select></label>
+            <button class="search-btn" type="submit">Search flights <b>→</b></button>
+          </div>
+        </form>
+      </section>
+      <section class="content" id="flights">
+        <div class="section-heading"><div><p class="eyebrow">AVAILABLE TO FLY</p><h2>Today’s selected routes</h2></div><p id="routeNote">New Delhi to Mumbai · Choose a flight to continue</p></div>
+        <div id="message" class="message" role="status"></div>
+        <div id="flightList" class="flight-list"></div>
+      </section>
+      <section class="experience"><div><p class="eyebrow">MORE THAN A SEAT</p><h2>Air travel, properly considered.</h2></div><div class="feature-grid"><article><span>01</span><h3>Clear choices</h3><p>Fares, bags and timings are visible before you decide.</p></article><article><span>02</span><h3>Room to reset</h3><p>Comfort-led cabins designed around actual breathing space.</p></article><article><span>03</span><h3>Here when plans move</h3><p>Flexible changes, with people on hand when you need them.</p></article></div></section>
+      <section class="manage" id="manage"><p class="eyebrow">YOUR JOURNEY</p><h2>Manage a booking</h2><form id="lookupForm"><input id="reference" placeholder="Booking reference, e.g. SKY-ABC123" /><button>Find booking</button></form><div id="bookingResult"></div></section>
+    </main>
+    <dialog id="bookingDialog"><button class="dialog-close" id="closeDialog" aria-label="Close">×</button><div id="bookingFormWrap"></div></dialog>
+    <footer><span>SKYLINE AIRWAYS</span><span>© 2026 · FLY WELL</span></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
